@@ -1,0 +1,10 @@
+multiModule/app/services/XmlParserImpl.java
+ multiModule.app.services.XmlParserImpl
+multiModule/app/services/DocumentServiceImpl.java
+ multiModule.app.services.DocumentServiceImpl
+multiModule/app/services/SchemaGeneratorImpl.java
+ multiModule.app.services.SchemaGeneratorImpl
+multiModule/app/Main.java
+ multiModule.app.Main
+multiModule/app/services/DataGeneratorImpl.java
+ multiModule.app.services.DataGeneratorImpl

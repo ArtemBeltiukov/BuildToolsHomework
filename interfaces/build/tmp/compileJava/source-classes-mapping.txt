@@ -1,0 +1,16 @@
+interfaces/SchemaGenerator.java
+ interfaces.SchemaGenerator
+interfaces/DocumentService.java
+ interfaces.DocumentService
+models/SubCategory.java
+ models.SubCategory
+models/Category.java
+ models.Category
+models/Product.java
+ models.Product
+models/Catalog.java
+ models.Catalog
+interfaces/XmlParser.java
+ interfaces.XmlParser
+interfaces/DataGenerator.java
+ interfaces.DataGenerator

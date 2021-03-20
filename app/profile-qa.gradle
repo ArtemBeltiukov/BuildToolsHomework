@@ -1,0 +1,5 @@
+allprojects{
+    ext{
+        path = 'resources/catalog1.xml'
+    }
+}
