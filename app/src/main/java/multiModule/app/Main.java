@@ -21,9 +21,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         Properties props = new Properties();
         props.load(new FileInputStream("gradle.properties"));
-        String value = props.getProperty("PATH_TO_XML");
-        System.out.println(value);
-        final String XML_PATH = "catalog.xml";
+        final String XML_PATH = props.getProperty("PATH_TO_XML");
         // имя тэга для остановки при обходе StAX
         DocumentService documentService = new DocumentServiceImpl();
         XmlParser parser = new XmlParserImpl();

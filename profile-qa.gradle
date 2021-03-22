@@ -1,0 +1,5 @@
+def propertyFile = file"gradle.properties"
+def props = new Properties()
+propertyFile.withReader { props.load(it) }
+props.setProperty('PATH_TO_XML', "app/src/main/resources/xmls/catalog1.xml")
+propertyFile.withWriter { props.store(it,null) }

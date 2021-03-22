@@ -1,5 +1,0 @@
-allprojects{
-    ext{
-        path = 'resources/xmls/catalog1.xml'
-    }
-}

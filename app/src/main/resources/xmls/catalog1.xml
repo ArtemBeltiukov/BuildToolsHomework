@@ -3,7 +3,7 @@
     <category name="Electronic">
         <subCategory name="appliances">
             <product>
-                <manufacturer>Indesit1</manufacturer>
+                <manufacturer>Indesit</manufacturer>
                 <model>AB400</model>
                 <production_date>03.09.2020</production_date>
                 <color>White</color>
@@ -32,7 +32,7 @@
                 <price>1.5</price>
                 <stockBalance>1000</stockBalance>
                 <name>Bulb</name>
-                <id>333</id>
+                <id>3</id>
             </product>
         </subCategory>
     </category>

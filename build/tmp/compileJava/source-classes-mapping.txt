@@ -1,0 +1,26 @@
+main/java/interfaces/SchemaGenerator.java
+ interfaces.SchemaGenerator
+main/java/models/SubCategory.java
+ models.SubCategory
+main/java/interfaces/XmlParser.java
+ interfaces.XmlParser
+main/java/models/Category.java
+ models.Category
+main/java/multiModule/app/services/XmlParserImpl.java
+ multiModule.app.services.XmlParserImpl
+main/java/multiModule/app/services/DataGeneratorImpl.java
+ multiModule.app.services.DataGeneratorImpl
+main/java/multiModule/app/services/DocumentServiceImpl.java
+ multiModule.app.services.DocumentServiceImpl
+main/java/models/Catalog.java
+ models.Catalog
+main/java/interfaces/DocumentService.java
+ interfaces.DocumentService
+main/java/interfaces/DataGenerator.java
+ interfaces.DataGenerator
+main/java/models/Product.java
+ models.Product
+main/java/multiModule/app/services/SchemaGeneratorImpl.java
+ multiModule.app.services.SchemaGeneratorImpl
+main/java/multiModule/app/Main.java
+ multiModule.app.Main

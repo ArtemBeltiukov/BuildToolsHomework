@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="/resources/schemas/catalog.xsd">
+    <category name="Electronic">
+        <subCategory name="appliances">
+            <product>
+                <manufacturer>Indesit</manufacturer>
+                <model>AB400</model>
+                <production_date>03.09.2020</production_date>
+                <color>White</color>
+                <price>50.0</price>
+                <stockBalance>570</stockBalance>
+                <name>Washing machine</name>
+                <id>2</id>
+            </product>
+            <product>
+                <manufacturer>Bosch</manufacturer>
+                <model>AB290</model>
+                <production_date>03.09.2020</production_date>
+                <color>White</color>
+                <price>46.0</price>
+                <stockBalance>568</stockBalance>
+                <name>Washing machine</name>
+                <id>1</id>
+            </product>
+        </subCategory>
+        <subCategory name="light">
+            <product>
+                <manufacturer>Tesla</manufacturer>
+                <model>LI130</model>
+                <production_date>03.09.2020</production_date>
+                <color>White</color>
+                <price>1.5</price>
+                <stockBalance>1000</stockBalance>
+                <name>Bulb</name>
+                <id>3333</id>
+            </product>
+        </subCategory>
+    </category>
+</catalog>
