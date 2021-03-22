@@ -1,5 +1,5 @@
 allprojects{
     ext{
-        path = 'resources/catalog1.xml'
+        path = 'resources/xmls/catalog1.xml'
     }
 }
