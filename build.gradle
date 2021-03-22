@@ -22,7 +22,16 @@ repositories {
 }
 
 if (!hasProperty('buildProfile')) ext.buildProfile = 'production'
-apply from: "profile-${buildProfile}.gradle"
+def fileName = "catalog"
+if (buildProfile == "qa"){
+    fileName = "catalog1"
+}
+def propertyFile = file"gradle.properties"
+def props = new Properties()
+propertyFile.withReader { props.load(it) }
+props.setProperty('PATH_TO_XML', "app/src/main/resources/xmls/${fileName}.xml")
+propertyFile.withWriter { props.store(it,null) }
+
 
 dependencies {
     testRuntime group: 'io.airlift', name: 'log', version: '203'
