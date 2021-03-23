@@ -1,21 +1,20 @@
 plugins {
     id 'java'
     id 'application'
+    id 'groovy'
 }
 
 sourceSets {
     main {
         java {
-            srcDirs 'app/src'
-            srcDirs 'interfaces/src'
+            srcDirs 'app/src/main/java'
+            srcDirs 'interfaces/src/main/java'
         }
         resources {
             srcDirs 'app/src/main/resources'
         }
     }
 }
-
-
 
 repositories {
     mavenCentral()
@@ -26,10 +25,12 @@ def fileName = "catalog"
 if (buildProfile == "qa"){
     fileName = "catalog1"
 }
-def propertyFile = file"gradle.properties"
+
+def resourcesPath = "app/src/main/resources/"
+def propertyFile = file"${resourcesPath}gradle.properties"
 def props = new Properties()
 propertyFile.withReader { props.load(it) }
-props.setProperty('PATH_TO_XML', "app/src/main/resources/xmls/${fileName}.xml")
+props.setProperty('PATH_TO_XML', "xmls/${fileName}.xml")
 propertyFile.withWriter { props.store(it,null) }
 
 
@@ -46,11 +47,7 @@ jar {
     manifest {
         attributes "Main-Class": mainClassName
     }
-
-    from {
-        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
-    }
+    from 'gradle.properties'
 }
 
 
@@ -59,10 +56,9 @@ task fatJar(type: Jar) {
         attributes 'Main-Class': mainClassName
     }
 
-
     baseName = 'fat'
     from {
-        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
     }
     with jar
 }

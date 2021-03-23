@@ -12,15 +12,16 @@ import org.xml.sax.SAXException;
 
 import javax.xml.bind.JAXBException;
 import javax.xml.stream.XMLStreamException;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.Properties;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         Properties props = new Properties();
-        props.load(new FileInputStream("gradle.properties"));
+        try (final InputStream configInputStream = Main.class.getClassLoader().getResourceAsStream("gradle.properties");
+             final BufferedReader br = new BufferedReader(new InputStreamReader(configInputStream));) {
+            props.load(br);
+        }
         final String XML_PATH = props.getProperty("PATH_TO_XML");
         // имя тэга для остановки при обходе StAX
         DocumentService documentService = new DocumentServiceImpl();

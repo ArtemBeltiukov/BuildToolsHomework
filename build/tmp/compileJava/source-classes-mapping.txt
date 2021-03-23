@@ -1,26 +1,26 @@
-main/java/interfaces/SchemaGenerator.java
- interfaces.SchemaGenerator
-main/java/models/SubCategory.java
- models.SubCategory
-main/java/interfaces/XmlParser.java
- interfaces.XmlParser
-main/java/models/Category.java
- models.Category
-main/java/multiModule/app/services/XmlParserImpl.java
+multiModule/app/services/XmlParserImpl.java
  multiModule.app.services.XmlParserImpl
-main/java/multiModule/app/services/DataGeneratorImpl.java
- multiModule.app.services.DataGeneratorImpl
-main/java/multiModule/app/services/DocumentServiceImpl.java
+multiModule/app/services/DocumentServiceImpl.java
  multiModule.app.services.DocumentServiceImpl
-main/java/models/Catalog.java
+interfaces/SchemaGenerator.java
+ interfaces.SchemaGenerator
+models/Catalog.java
  models.Catalog
-main/java/interfaces/DocumentService.java
- interfaces.DocumentService
-main/java/interfaces/DataGenerator.java
- interfaces.DataGenerator
-main/java/models/Product.java
+models/Product.java
  models.Product
-main/java/multiModule/app/services/SchemaGeneratorImpl.java
- multiModule.app.services.SchemaGeneratorImpl
-main/java/multiModule/app/Main.java
+multiModule/app/Main.java
  multiModule.app.Main
+multiModule/app/services/DataGeneratorImpl.java
+ multiModule.app.services.DataGeneratorImpl
+models/SubCategory.java
+ models.SubCategory
+interfaces/XmlParser.java
+ interfaces.XmlParser
+multiModule/app/services/SchemaGeneratorImpl.java
+ multiModule.app.services.SchemaGeneratorImpl
+interfaces/DataGenerator.java
+ interfaces.DataGenerator
+models/Category.java
+ models.Category
+interfaces/DocumentService.java
+ interfaces.DocumentService

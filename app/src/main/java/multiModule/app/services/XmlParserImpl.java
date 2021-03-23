@@ -5,20 +5,32 @@ import com.google.gson.GsonBuilder;
 import interfaces.XmlParser;
 import models.Catalog;
 
-
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import javax.xml.validation.Schema;
-import java.io.File;
+import java.io.*;
+import java.net.URL;
 
 
 public class XmlParserImpl implements XmlParser {
     private final String SCHEMA_LOCATION = "/resources/schemas/catalog.xsd";
     @Override
     public File convertObjectToXml(Object catalog, String filePath, Schema schema) throws JAXBException {
-        File xmlFile = new File(filePath);
+        InputStream is = getClass().getClassLoader().getResourceAsStream(filePath);
+        File xmlFile = new File("catalog.xml");
+        byte[] buffer = new byte[0];
+        try {
+            buffer = new byte[is.available()];
+            is.read(buffer);
+            OutputStream outStream = new FileOutputStream(xmlFile);
+            outStream.write(buffer);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
         JAXBContext context = JAXBContext.newInstance(Catalog.class);
         Marshaller marshaller = context.createMarshaller();
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);

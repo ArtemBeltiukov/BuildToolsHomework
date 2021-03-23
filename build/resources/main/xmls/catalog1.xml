@@ -32,7 +32,7 @@
                 <price>1.5</price>
                 <stockBalance>1000</stockBalance>
                 <name>Bulb</name>
-                <id>3333</id>
+                <id>3</id>
             </product>
         </subCategory>
     </category>
